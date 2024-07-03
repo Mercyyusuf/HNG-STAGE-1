@@ -1,0 +1,106 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    color: #333;
+}
+ footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+footer {
+    border-radius: 0 0 8px 8px;
+}
+
+h1, h2 {
+    margin: 0.5rem 0;
+}
+
+.container {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+
+.date-time {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.date-time p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.date-time span {
+    font-weight: bold;
+}
+
+.links {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.links a {
+    display: inline-block;
+    margin: 10px 15px;
+    color: #f5f5fa;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background: #e2e2e2;
+    margin: 0.5rem 0;
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+.goals {
+    text-align: left;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+
+    section {
+        padding: 1rem;
+    }
+
+    ul li {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    ul li {
+        font-size: 0.8rem;
+    }
+}
