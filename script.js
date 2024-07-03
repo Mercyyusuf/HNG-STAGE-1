@@ -1,23 +1,24 @@
-// Function to update the current time in UTC
 function updateTime() {
     const now = new Date();
-    const utcTime = now.toUTCString();
-    document.getElementById('currentTimeUTC').textContent = utcTime;
+
+   
+    let hours = now.getHours();
+    const minutes = now.getMinutes();
+    const seconds = now.getSeconds();
+    const ampm = hours >= 12 ? 'PM' : 'AM';
+    hours = hours % 12;
+    hours = hours ? hours : 12; 
+
+    
+    const strTime = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')} ${ampm}`;
+  
+    const options = { weekday: 'long' };
+    const day = new Intl.DateTimeFormat('en-US', options).format(now);
+    
+   
+    document.getElementById('currentTime').innerText = strTime;
+    document.getElementById('currentDay').innerText = day;
 }
 
-// Function to update the current day of the week
-function updateDay() {
-    const now = new Date();
-    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-    const day = days[now.getUTCDay()];
-    document.getElementById('currentDay').textContent = day;
-}
-
-// Update time and day on page load
-window.onload = function() {
-    updateTime();
-    updateDay();
-};
-
-// Update time every second
-setInterval(updateTime, 1000);
+setInterval(updateTime, 1000); 
+updateTime();  
